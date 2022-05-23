@@ -240,10 +240,6 @@ runs:
           log_info "Installation complete!"
         
         fi
-      if [[ ${{ runner.os == 'Windows' }} ]]; then
-        mv cosign cosign.exe
-        Set-Alias cosign cosign.exe
-      fi
     - if: ${{ runner.os == 'Linux' || runner.os == 'macOS' }}
       run:  echo "${{ inputs.install-dir }}" >> $GITHUB_PATH
       shell: bash

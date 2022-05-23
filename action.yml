@@ -240,7 +240,6 @@ runs:
           log_info "Installation complete!"
         
         fi
-      # create alias for windows
       if [[ ${{ runner.os == 'Windows' }} ]]; then
         mv cosign cosign.exe
         Set-Alias cosign cosign.exe
